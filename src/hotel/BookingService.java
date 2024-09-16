@@ -16,7 +16,7 @@ public class BookingService {
     //Metod för att boka ett rum baserat på rumsnummer
     public void bookRoom(String roomNr) {
         Room room = findRoom(roomNr);
-        if (room == null) {
+        if (!room.isBooked()) {
             room.bookRoom();
         } else {
             System.out.println("Room " + room.getRoomNr() + " was not found.");
@@ -37,7 +37,6 @@ public class BookingService {
         //for each - for each room in rooms
         for (Room room : rooms) {
             room.displayRoom();
-            System.out.println();
         }
     }
 

@@ -51,7 +51,7 @@ public class Room {
 
     //Metod för att visa detaljer
 
-    //Annotation/anteckning - överskriden metod
+    //"@override" = Annotation/anteckning för överskriden metod
     /*@Override
     public String toString() {
         return "Room{" +

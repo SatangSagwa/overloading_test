@@ -12,7 +12,12 @@ public class Main {
     }
 
     public static int calcScore(int score) {
-        System.out.println("Unnamed player's score is " + score);
-        return score * 1000;
+        //System.out.println("Unnamed player's score is " + score);
+        //return score * 1000;
+        return calcScore("Anonymous", score);
+    }
+
+    public static void calcScore() {
+        System.out.println("No player, No score");
     }
 }

@@ -14,10 +14,10 @@ public class BookingService {
     }
 
     //Metod för att boka ett rum baserat på rumsnummer
-    public void bookRoom(String roomNr, Customer customer) {
-        Room room = findRoom(roomNr);
+    public void bookRoom(Booking booking) {
+        Room room = findRoom(booking.getRoom().getRoomNr());
         if (!room.isBooked()) {
-            room.bookRoom(customer);
+            room.bookRoom(booking);
 
         } else {
             System.out.println("Room " + room.getRoomNr() + " was not found.");

@@ -47,13 +47,13 @@ public class Room {
     }
 
     //Metod för att boka
-    public void bookRoom(Customer customer) {
+    public void bookRoom(Booking booking) {
         if (isBooked) {
             System.out.println("Room " + roomNr + " is already booked");
         } else {
             isBooked = true;
-            this.customer = customer;
-            System.out.println("Room " + roomNr + " has been reserved");
+            this.customer = booking.getCustomer();
+            System.out.println("Room " + booking.getRoom().getRoomNr() + " has been reserved");
         }
     }
     //Metod för att avboka
